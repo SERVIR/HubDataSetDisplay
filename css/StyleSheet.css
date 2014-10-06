@@ -1,0 +1,155 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box; /* Firefox */
+    -webkit-box-sizing: border-box; /* Safari */
+}
+
+.clear {
+    clear: both;
+}
+
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin: 0; /*Top and Bottom 0, Left and Right auto */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.body #main_wrapper {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#main_wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+#form1 {
+    width: 100%;
+    height: 100%;
+}
+
+#rcmrdlayers {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.navbar-fixed-top {
+    display: none !important;
+}
+
+#countholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: aliceblue;
+    padding: 5px;
+    display: none;
+}
+
+#dvLayers .box {
+    float: left;
+    border: 1px solid #e5e4e4;
+    background: #efeff0;
+    padding: 9px;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+#dvLayers .item.space {
+    /*width: 48%;
+            float: left;
+            margin-right: 20px;*/
+}
+
+#dvLayerstemplate {
+    display: none;
+}
+
+.layerPhotosStyle {
+    width: 100px;
+}
+.popupdataLabel
+{
+    vertical-align:top;
+    white-space:nowrap;
+    width:124px;
+}
+.popupdataData
+{
+    vertical-align:top;
+    width:255px;
+}
+.mappopup {
+    color: #1b407b;
+}
+
+    .mappopup:hover {
+        color: #ed9126;
+    }
+
+.read-more-content {
+    display: block;
+    overflow: hidden;
+    max-width: 370px;
+}
+
+    .read-more-content.hide {
+        display: none;
+        overflow: hidden;
+    }
+
+.itemtable {
+    width: 400px;
+    float: left;
+    padding: 5px;
+}
+
+.poptemplate {
+    display: none;
+}
+
+#sb-player.html {
+    overflow: hidden !important;
+}
+
+#sb-title-inner, #sb-info-inner, #sb-loading-inner, div.sb-message {
+    color: orange !important;
+}
+
+#sb-player .bigimage {
+    overflow: hidden;
+    text-align: center;
+    background: #ededee url(../images/ajax-loader.gif) no-repeat center;
+}
+
+#sb-player .detail {
+    float: right;
+    padding: 10px;
+    width: 410px;
+    max-height: 510px;
+    /*width: 270px;
+height: 455px;*/
+    overflow: auto;
+}
+
+#sb-player .inner {
+    margin: 30px;
+    border: 5px solid silver;
+    padding: 5px;
+    border-style: ridge;
+}
