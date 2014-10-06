@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.Services;
 using System.Web.UI;
@@ -10,6 +11,8 @@ using System.Web.UI.WebControls;
 
 public partial class _Default : System.Web.UI.Page
 {
+    public delegate void Worker();
+    private static Thread worker;
     protected void Page_Load(object sender, EventArgs e)
     {
          
@@ -20,7 +23,13 @@ public partial class _Default : System.Web.UI.Page
         return GetDataSets(pageIndex).GetXml(); 
 
     }
-
+    [WebMethod]
+    public static string CreateThumbNail(string theUID)
+    {
+        Thread newThread = new Thread(MakeThumbNail.DoWork);
+        newThread.Start(theUID);
+        return "Process Started";
+    }
     public static DataSet GetDataSets(int pageIndex)
     {
         int pagesize = 10;
@@ -53,8 +62,8 @@ public partial class _Default : System.Web.UI.Page
                 }
             }
         }
+        
     }
-
 
     #region Utilities
 
@@ -78,4 +87,14 @@ public partial class _Default : System.Web.UI.Page
 
     #endregion
 
+}
+
+
+public class MakeThumbNail
+{
+    public static void DoWork(object theUID)
+    {
+        string myUID = theUID.ToString();
+        /* Go get the image and save it */
+    }
 }
