@@ -15,10 +15,10 @@ function GetRecords() {
             dataType: "json",
             success: OnScrollSuccess,
             failure: function (response) {
-                alert(response.d);
+                alert(response + ' failure ' + response.d);
             },
             error: function (response) {
-                alert(response.d);
+                alert(response + ' error ' + response.d);
             }
         });
     }
@@ -194,7 +194,7 @@ function openDetails(which) {
     }
 }
 function MakeThumbNail(which) {
-    $.ajax({
+   /* $.ajax({
         type: "POST",
         url: "Default.aspx/CreateThumbNail",
         data: '{theUID: "' + which + '"}',
@@ -207,7 +207,7 @@ function MakeThumbNail(which) {
         error: function (response) {
             alert(response.d);
         }
-    });
+    });*/
 }
 function OnCreateThumbNailSuccess(response)
 {
