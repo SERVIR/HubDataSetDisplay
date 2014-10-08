@@ -165,4 +165,8 @@ height: 455px;*/
     border: 5px solid silver;
     padding: 5px;
     border-style: ridge;
+    background: #09151D url(https://www.servirglobal.net/Portals/_default/Containers/twoColumnGrid/images/two-column-grid-gradient.gif) top repeat-x;
+}
+.productTitle{
+    color:white;
 }
