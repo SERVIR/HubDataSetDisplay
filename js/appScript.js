@@ -82,8 +82,8 @@ function OnScrollSuccess(response) {
             alt: mytitle,
             title: mytitle,
             src: bgimg,
-            width: '350px',
-            height: '350px'
+            width: '515px',
+            height: '515px'
         });
 
 
