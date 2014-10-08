@@ -49,36 +49,41 @@ function OnScrollSuccess(response) {
         var thepic = $(".layerPhotosStyle", table);
         var theThumb;
         var MetadataUID = dataSet.find("MetadataUID").text();
-        if (UrlExists(imagePath + MetadataUID + '.jpg')) {
+        //if (UrlExists(imagePath + MetadataUID + '.jpg')) {
             theThumb = imagePath + MetadataUID + '.jpg'
-        }
-        else {
-            theThumb = dataSet.find("Thumb").text();
+       // }
+       // else {
+        //    theThumb = dataSet.find("Thumb").text();
 
             /* Make ajax call here to fire server process to create the local thumbnail and lg image */
 
-        }
+       // }
         thepic.attr({
             alt: mytitle,
             title: mytitle,
-            src: theThumb//.replace("width=100", "width=350").replace("height=100", "height=350")
+            src: theThumb,//.replace("width=100", "width=350").replace("height=100", "height=350")
+            width: '100px',
+            height: '100px'
+
         });
 
         var poptemplate = $("#poptemplate").eq(0).clone(true);
         var bgimg;
 
-        if (UrlExists(imagePath + 'lg' + MetadataUID + '.jpg')) {
+        //if (UrlExists(imagePath + 'lg' + MetadataUID + '.jpg')) {
             bgimg = imagePath + 'lg' + MetadataUID + '.jpg'
-        }
-        else {
-            bgimg = dataSet.find("Thumb").text().replace("width=100", "width=515").replace("height=100", "height=515")
-        }
+        //}
+        //else {
+         //   bgimg = dataSet.find("Thumb").text().replace("width=100", "width=515").replace("height=100", "height=515")
+        //}
 
         var bigimage = $(".bigimage img", poptemplate);
         bigimage.attr({
             alt: mytitle,
             title: mytitle,
-            src: bgimg
+            src: bgimg,
+            width: '350px',
+            height: '350px'
         });
 
 

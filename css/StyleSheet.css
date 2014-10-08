@@ -63,11 +63,23 @@ body {
 
 #dvLayers .box {
     float: left;
-    border: 1px solid #e5e4e4;
-    background: #efeff0;
-    padding: 9px;
     margin: 0 0 20px 0;
     width: 100%;
+    margin: 0 auto;
+    background: #09151D url(https://www.servirglobal.net/Portals/_default/Containers/twoColumnGrid/images/two-column-grid-gradient.gif) top repeat-x;
+    font-size: 14px;
+    padding: 15px 15px 20px 15px;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+}
+
+span.LayerListTitle {
+    margin-left: 25px;
+}
+
+.item.space h3 {
+    background: url(https://www.servirglobal.net/Portals/_default/Containers/twoColumnGrid/images/two-column-grid-topper.png);
+    height: 35px;
 }
 
 #dvLayers .item.space {
@@ -83,17 +95,18 @@ body {
 .layerPhotosStyle {
     width: 100px;
 }
-.popupdataLabel
-{
-    vertical-align:top;
-    white-space:nowrap;
-    width:124px;
+
+.popupdataLabel {
+    vertical-align: top;
+    white-space: nowrap;
+    width: 124px;
 }
-.popupdataData
-{
-    vertical-align:top;
-    width:255px;
+
+.popupdataData {
+    vertical-align: top;
+    width: 255px;
 }
+
 .mappopup {
     color: #1b407b;
 }
