@@ -130,7 +130,7 @@ span.LayerListTitle {
 }
 
 #sb-player.html {
-    overflow: hidden !important;
+    /*overflow: hidden !important;*/
 }
 
 #sb-title-inner, #sb-info-inner, #sb-loading-inner, div.sb-message {
@@ -142,6 +142,9 @@ span.LayerListTitle {
     text-align: center;
     background: #ededee url(https://www.servirglobal.net/DesktopModules/SERVIR_Dataset_List/UI/images/ajax-loader.gif) no-repeat center;
 }
+#sb-player .bigimage img{
+    max-width: 100%;
+}
 
 #sb-player .detail {
     float: left;
@@ -150,6 +153,7 @@ span.LayerListTitle {
     max-height: 510px;
     /*width: 270px;
 height: 455px;*/
+    max-width: 60%!important;
     overflow: auto;
 }
 
