@@ -3,6 +3,8 @@ var pageIndex = 0;
 var pageCount = 200;
 var evenNum = true;
 var imagePath = "images/";
+var monthNames = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"];
 function GetRecords() {
     pageIndex++;
     if (pageIndex == 2 || pageIndex <= pageCount) {
@@ -95,17 +97,20 @@ function OnScrollSuccess(response) {
         });
 
         $(".productTitle", poptemplate).html(mytitle);
-        $(".productDate", poptemplate).html(dataSet.find("PublicationDate").text());
+
+        var theDate = processDate(dataSet.find("PublicationDate").text());
+
+        $(".productDate", poptemplate).html(theDate);
         var productAbstract = dataSet.find("Abstract").text();
         if (productAbstract.length > 153) {
             productAbstract = productAbstract.substring(0, 153) + '...';
         }
         $(".productAbstract", poptemplate).html(productAbstract);
-        $(".productType", poptemplate).html(dataSet.find("Type").text());
-        var dsinfo = "<a href='" + dataSet.find("MetadataURL").text() + "' target='_blank'>SERVIR AFRICA PORTAL</a><br />";
-        dsinfo += "<a href='http://rcmrd.org/' target='_blank'>RCMRD</a><br />";
-        dsinfo += "<a href='https://servirglobal.net/' target='_blank'>SERVIR</a><br />";
-        $(".productDataSource", poptemplate).html(dsinfo);
+       // $(".productType", poptemplate).html(dataSet.find("Type").text());
+      //  var dsinfo = "<a href='" + dataSet.find("MetadataURL").text() + "' target='_blank' class='printmeta'>SERVIR AFRICA PORTAL</a><br />";//'<input type="button" value="" onclick="" >';
+       // dsinfo += "<a href='http://rcmrd.org/' target='_blank'>RCMRD</a><br />";
+       // dsinfo += "<a href='https://servirglobal.net/' target='_blank'>SERVIR</a><br />";
+       // $(".productDataSource", poptemplate).html(dsinfo);
         var downloadTitle = "Zipfile";
         var downloadLink = $(".productDownload", poptemplate);
         var downLoadHref = dataSet.find("Zipfile").text();
@@ -118,7 +123,19 @@ function OnScrollSuccess(response) {
             title: mytitle + ' - ' + downloadTitle,
             target: '_blank'
         });
-
+        var readmoreLink = $(".productReadMore", poptemplate);
+        var readmoreHref = dataSet.find("MetadataURL").text();
+        readmoreLink.attr({
+            href: readmoreHref,
+            title: mytitle + ' - ' + downloadTitle,
+            target: '_blank'
+        });
+        var productvisualizeLink = $(".productvisualize", poptemplate);
+        productvisualizeLink.attr({
+            href: readmoreHref,
+            title: mytitle + ' - ' + downloadTitle,
+            target: '_blank'
+        });
         $(".read-more-content", table).attr(
             { id: dataID });
         $(".LayerAbstract", table).html(dataSet.find("Abstract").text());
@@ -133,6 +150,12 @@ function OnScrollSuccess(response) {
     $("#loader").hide();
     finishedLoading = true;
     setTimeout("checkScrollbar()", 2000);
+}
+function processDate(which)
+{
+    var myDate = new Date(which);
+    var processedDate = monthNames[myDate.getMonth()] + ' ' + myDate.getUTCFullYear();
+    return processedDate;
 }
 //this function is basically for demo purposes only
 function loadx(x) {

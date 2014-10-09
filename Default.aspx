@@ -65,54 +65,46 @@
         <div id="poptemplate" class="poptemplate">
             <div class="inner">
                 <div class="detail">
+                    <img src="images/eafricaheader.png" style="width:375px;" alt="SERVIR - East Africa" />
                     <h4>
                         <p class="productTitle">Title Not Provided</p>
                     </h4>
                     <p class="date">Published on: <span class="productDate">Date Not Provided</span></p>
 
-                    <table style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+                    <table style="width: 100%; padding-right:5px;" border="0" cellspacing="0" cellpadding="0">
                         <tbody>
                             <tr>
-                                <td class="popupdataLabel">
-                                    <p><strong>Data content</strong>:</p>
-                                </td>
-                                <td class="popupdataData">
+                                <td colspan="2">
                                     <p class="productAbstract">No Abstract Provided</p>
                                 </td>
                             </tr>
+                           
                             <tr>
-                                <td class="popupdataLabel">
-                                    <p><strong>Geometry type:</strong></p>
-                                </td>
-                                <td class="popupdataData">
-                                    <p class="productType">No Type Provided</p>
+                                <td colspan="2">
+                                    <img src="images/spacer.png" style="height:80px; width:0px;" />
                                 </td>
                             </tr>
                             <tr>
-                                <td class="popupdataLabel">
-                                    <p>
-                                        <strong>Data source:
-                                        </strong>
-                                    </p>
-                                </td>
-                                <td class="popupdataData">
-                                    <p class="productDataSource"></p>
+                                <td colspan="2" style="text-align: center;">
+                                    <a class="productDownload" target="_blank" href="#"><img src="images/download.png" alt="Download" /></a><a class="productvisualize" target="_blank" href="#"><img src="images/visualize.png" alt="visualize" /></a><a class="productReadMore" target="_blank" href="#"><img src="images/readmore.png" alt="Download" /></a>
                                 </td>
                             </tr>
-                            <tr>
-                                <td class="popupdataLabel">
-                                    <p><strong>Disclaimer:</strong></p>
+                            <tr style="background: url(images/footer-logos-bg.png);">
+                                <td colspan="2">
+                                    <img src="images/combologos.png" style="width:375px;" />
                                 </td>
-                                <td class="popupdataData">
-                                    <p><a href="https://servirglobal.net/Global/PrivacyTermsofUse.aspx" target="_blank">Read disclaimer</a>&nbsp;</p>
+                            </tr>
+                             <tr>
+                                <td colspan="2">
+                                    <p style="text-align:center;"><a href="https://servirglobal.net/Global/PrivacyTermsofUse.aspx" target="_blank">Read disclaimer</a>&nbsp;</p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <p>&nbsp;</p>
+                    
                     <!---->
                     <!---->
-                    <a class="productDownload" target="_blank" href="/uploads/map/data/download/gms_ec-roads_4.zip">Download</a>
+                    
                 </div>
                 <div class="bigimage">
                     <img src="images/nopreview.jpg" alt="" />
